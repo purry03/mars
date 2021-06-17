@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
+    <title>Mars</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/index.css" />
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -86,10 +87,201 @@
 
     <div class="planet-section">
       <h2 class="planet-heading">EARTH</h2>
-      <div class="planet-anim-wrapper">
+      <div class="planet-anim-wrapper planet-earth">
         <img src="img/earth.png" class="earth" />
-                <img src="img/moon.svg" class="moon" />
+        <img src="img/moon.svg" class="moon" />
+        <div class="planet-tooltip tooltip-left tooltip-temperature">
+          <h4>Temperature</h4>
+          <div class="tooltip-line-wrapper">
+            <hr class="gray-line" />
+            <hr class="white-line" />
+          </div>
+          <h3>C 14 °</h3>
+        </div>
 
+        <div class="planet-tooltip tooltip-mass">
+          <h4>Мass</h4>
+          <div class="tooltip-line-wrapper">
+            <hr class="gray-line" />
+            <hr class="white-line" />
+          </div>
+          <h3>5,9726⋅10 <sup>24</sup> kg</h3>
+        </div>
+
+        <div class="planet-tooltip tooltip-area">
+          <h4>Surface area</h4>
+          <div class="tooltip-line-wrapper">
+            <hr class="gray-line" />
+            <hr class="white-line" />
+          </div>
+          <h3>510,1 million km²</h3>
+        </div>
+
+        <div class="planet-tooltip tooltip-right tooltip-satellite">
+          <h4>Satellite</h4>
+          <div class="tooltip-line-wrapper">
+            <hr class="gray-line" />
+            <hr class="white-line" />
+          </div>
+          <h3>The Moon</h3>
+        </div>
+
+        <div class="planet-tooltip tooltip-right tooltip-distance">
+          <h4>Distance from the Sun</h4>
+          <div class="tooltip-line-wrapper">
+            <hr class="yellow-gray-line" />
+            <hr class="yellow-line" />
+          </div>
+          <h3>149,6 million km</h3>
+        </div>
+
+        <div class="planet-tooltip tooltip-right tooltip-structure">
+          <h4>Structure</h4>
+          <div class="tooltip-line-wrapper">
+            <hr class="gray-line" />
+            <hr class="white-line" />
+          </div>
+          <div class="elements-wrapper">
+            <div class="element">
+              <div class="symbol">N<sub>2</sub></div>
+              <h4 class="name">Nitrogen</h4>
+            </div>
+            <div class="element">
+              <div class="symbol">O<sub>2</sub></div>
+              <h4 class="name">Oxygen</h4>
+            </div>
+            <div class="element">
+              <div class="symbol">Ar</div>
+              <h4 class="name">Argon</h4>
+            </div>
+            <div class="element">
+              <div class="symbol">CO<sub>2</sub></div>
+              <h4 class="name">Carbon Dioxide</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="rotation-visualizer-wrapper">
+          <div class="circle-wrapper">
+            <img src="img/rotating-circle.svg" />
+            <h4>24 hours</h4>
+          </div>
+          <h5>Earth's rotation</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="planet-section planet-section-2">
+      <h2 class="planet-heading">MARS</h2>
+      <div class="planet-anim-wrapper planet-earth">
+        <img src="img/mars-2.png" class="earth" />
+                <img src="img/phobos.svg" class="phobos" />
+        <img src="img/deimos.svg" class="deimos" />
+        <div class="planet-tooltip tooltip-left tooltip-temperature">
+          <h4>Temperature</h4>
+          <div class="tooltip-line-wrapper">
+            <hr class="gray-line" />
+            <hr class="white-line" />
+          </div>
+          <h3>C – 63 °</h3>
+        </div>
+
+        <div class="planet-tooltip tooltip-mass">
+          <h4>Мass</h4>
+          <div class="tooltip-line-wrapper">
+            <hr class="gray-line" />
+            <hr class="white-line" />
+          </div>
+          <h3>6,4171⋅10 <sup>23</sup> kg</h3>
+        </div>
+
+        <div class="planet-tooltip tooltip-area">
+          <h4>Surface area</h4>
+          <div class="tooltip-line-wrapper">
+            <hr class="gray-line" />
+            <hr class="white-line" />
+          </div>
+          <h3>144,8 million km²</h3>
+        </div>
+
+        <div class="planet-tooltip tooltip-right tooltip-phobos">
+          <h4>Satellite</h4>
+          <div class="tooltip-line-wrapper">
+            <hr class="gray-line" />
+            <hr class="white-line" />
+          </div>
+          <h3>Phobos</h3>
+        </div>
+
+        <div class="planet-tooltip tooltip-right tooltip-deimos">
+          <h4>Satellite</h4>
+          <div class="tooltip-line-wrapper">
+            <hr class="gray-line" />
+            <hr class="white-line" />
+          </div>
+          <h3>Deimos</h3>
+        </div>
+
+        <div class="planet-tooltip tooltip-right tooltip-distance">
+          <h4>Distance from the Sun</h4>
+          <div class="tooltip-line-wrapper">
+            <hr class="yellow-gray-line" />
+            <hr class="yellow-line" />
+          </div>
+          <h3>227,9 million km</h3>
+        </div>
+
+        <div class="planet-tooltip tooltip-right tooltip-structure">
+          <h4>Structure</h4>
+          <div class="tooltip-line-wrapper">
+            <hr class="gray-line" />
+            <hr class="white-line" />
+          </div>
+          <div class="elements-wrapper">
+            <div class="element">
+              <div class="symbol">CO<sub>2</sub></div>
+              <h4 class="name">Carbon Dioxide</h4>
+            </div>
+            <div class="element">
+              <div class="symbol">N<sub>2</sub></div>
+              <h4 class="name">Nitrogen</h4>
+            </div>
+            <div class="element">
+              <div class="symbol">Ar</div>
+              <h4 class="name">Argon</h4>
+            </div>
+
+            <div class="element">
+              <div class="symbol">O<sub>2</sub></div>
+              <h4 class="name">Oxygen</h4>
+            </div>
+            <div class="element">
+              <div class="symbol">CO</div>
+              <h4 class="name">Carbon Monoxide</h4>
+            </div>
+            <div class="element">
+              <div class="symbol">CH<sub>4</sub></div>
+              <h4 class="name">Methanum</h4>
+            </div>
+            <div class="element">
+              <div class="symbol">CH<sub>2</sub>O</div>
+              <h4 class="name">Methanal</h4>
+            </div>
+            <div class="element">
+              <div class="symbol">CH<sub>4</sub>O</div>
+              <h4 class="name">Methanol</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="rotation-visualizer-wrapper">
+          <div class="circle-wrapper">
+            <img src="img/rotating-circle.svg" />
+            <h4>24 hours</h4>
+            <h4>37 minutes</h4>
+          </div>
+          <h5>Mars rotation</h5>
+        </div>
       </div>
     </div>
     <script src="js/index.js"></script>

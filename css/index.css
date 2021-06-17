@@ -68,12 +68,12 @@ body {
   flex-wrap: wrap;
   height: 100%;
   width: 100%;
+  padding: 5% 20%;
 }
 
 .section-1 .section-content-wrapper {
   height: fit-content;
   width: 100%;
-  padding: 20%;
   text-align: center;
 }
 
@@ -116,7 +116,6 @@ body {
 .section-2 .section-content-wrapper {
   height: max-content;
   width: 100%;
-  padding: 20%;
   text-align: left;
 }
 
@@ -148,6 +147,10 @@ body {
   padding: 0 20%;
 }
 
+.planet-section-2 {
+  margin-top: 200px;
+}
+
 .planet-heading {
   font-size: 2rem;
   font-weight: 400;
@@ -161,28 +164,233 @@ body {
   display: block;
 }
 
+.planet-tooltip {
+  position: absolute;
+  transform: translate(-25%, -50%);
+  max-height: 100px;
+  width: 350px;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+}
+
+.tooltip-line-wrapper {
+  position: relative;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.planet-tooltip hr {
+  position: absolute;
+  width: 100%;
+}
+
+.gray-line {
+  opacity: 0.5;
+}
+
+.yellow-gray-line {
+  border-color: #ffbe3f;
+  opacity: 0.5;
+}
+
+.yellow-line {
+  border-color: #f7b125;
+}
+
+.planet-tooltip h3 {
+  position: absolute;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+
+.tooltip-right {
+  text-align: right;
+  right: 0;
+  transform: translate(25%, -50%);
+}
+
+.tooltip-right .tooltip-line-wrapper hr {
+  right: 0;
+}
+
+.tooltip-temperature {
+  top: 33%;
+  left: 0;
+}
+
+.planet-earth .tooltip-temperature {
+  z-index: 2;
+}
+
+.tooltip-mass {
+  top: 50%;
+  left: 0;
+}
+
+.tooltip-mass .white-line {
+  width: 50%;
+}
+
+.tooltip-area {
+  top: 66%;
+}
+
+.tooltip-area .white-line {
+  width: 66%;
+}
+
+.tooltip-satellite {
+  top: 33%;
+  width: 150px;
+}
+
+.tooltip-phobos {
+  top: 36%;
+  right: -5%;
+  width: 220px;
+}
+
+.tooltip-deimos {
+  top: 25%;
+  right: -1%;
+  width: 150px;
+}
+
+.tooltip-distance {
+  top: 50%;
+  right: -10%;
+}
+
+.tooltip-distance .yellow-line {
+  width: 62%;
+}
+
+.tooltip-structure {
+  top: 66%;
+}
+
+.elements-wrapper {
+  position: absolute;
+  padding-left: 45%;
+  padding-top: 10px;
+}
+
+.element {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin: 10px 0;
+  font-size: 0.85rem;
+}
+
+.symbol {
+  padding: 4px;
+  min-width: 40px;
+  margin-right: 10px;
+  text-align: center;
+  border: 1px solid #aaa;
+}
+
+.name {
+  text-align: left;
+  white-space: nowrap;
+}
+
+.rotation-visualizer-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  height: 150px;
+}
+
+.circle-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 150px;
+}
+
+.circle-wrapper h4 {
+  width: 100%;
+  margin-bottom: 5px;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.rotation-visualizer-wrapper h5 {
+  font-size: 0.85rem;
+}
+
+.circle-wrapper img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  animation: rotate 5s infinite linear;
+}
+
 .planet-anim-wrapper .earth {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: rotatePlanet 150s infinite linear;
+  animation: rotate 150s infinite linear;
+  z-index: 1;
 }
 
 .planet-anim-wrapper .moon {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  animation: rotatePlanet 90s infinite linear;
+  animation: rotate 90s infinite linear;
+  z-index: 1;
 }
 
-@keyframes rotatePlanet {
+.planet-anim-wrapper .deimos {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: rotate 90s infinite linear;
+  z-index: 1;
+}
+
+.planet-anim-wrapper .phobos {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: rotateInverse 90s infinite linear;
+  z-index: 1;
+}
+
+@keyframes rotate {
   0% {
+    transform-origin: center;
     transform: translate(-50%, -50%) rotate(0deg);
   }
 
   100% {
     transform: translate(-50%, -50%) rotate(359deg);
+  }
+}
+
+@keyframes rotateInverse {
+  0% {
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(-359deg);
   }
 }
