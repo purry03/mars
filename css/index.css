@@ -278,6 +278,7 @@ body {
 
 .tooltip-structure {
   top: 66%;
+  z-index: 2;
 }
 
 .elements-wrapper {
