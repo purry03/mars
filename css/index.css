@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+}
+
+.main-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.mars-wrapper {
+  position: relative;
+  width: 50%;
+  height: 700px;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+.mars-wrapper .mars {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.mars-text-wrapper {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+  text-align: center;
+}
+
+.mars-text-wrapper h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.9rem;
+  word-spacing: 0.1rem;
+}
+
+.mars-text-wrapper h1 {
+  font-size: 8rem;
+}
+
+.spacer {
+  height: 250px;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+}
+
+.section-1 .section-content-wrapper {
+  height: fit-content;
+  width: 100%;
+  padding: 20%;
+  text-align: center;
+}
+
+.section-1 h3 {
+  height: fit-content;
+  width: 100%;
+  font-size: 2rem;
+  opacity: 0.9;
+}
+
+.section-1 h4 {
+  height: fit-content;
+  width: 100%;
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+.section-1 h6 {
+  margin: 0 auto;
+  margin-top: 50px;
+  height: fit-content;
+  width: 75%;
+  font-size: 1rem;
+  opacity: 0.5;
+}
+
+.section-1 p {
+  margin: 0 auto;
+  margin-top: 50px;
+  height: fit-content;
+  width: 75%;
+  font-size: 0.9rem;
+  opacity: 0.5;
+}
+
+.section-2 {
+  height: fit-content;
+}
+
+.section-2 .section-content-wrapper {
+  height: max-content;
+  width: 100%;
+  padding: 20%;
+  text-align: left;
+}
+
+.section-2 h2 {
+  width: 500px;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+}
+
+.section-2 .grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.section-2 .grid p {
+  height: 40%;
+  width: 45%;
+  margin: 25px 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.5;
+  opacity: 0.75;
+}
+
+.planet-section {
+  width: 100%;
+  padding: 0 20%;
+}
+
+.planet-heading {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.75rem;
+}
+
+.planet-anim-wrapper {
+  height: 850px;
+  width: 100%;
+  position: relative;
+  display: block;
+}
+
+.planet-anim-wrapper .earth {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotatePlanet 150s infinite linear;
+}
+
+.planet-anim-wrapper .moon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotatePlanet 90s infinite linear;
+}
+
+@keyframes rotatePlanet {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(359deg);
+  }
+}
