@@ -441,10 +441,19 @@ body {
 }
 
 .right-container {
+  position: relative;
   height: 100%;
   width: 70%;
   border-top: 1px solid #aaa;
-  overflow: hidden;
+}
+
+.plus {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translate(-50%, -53%);
+  font-size: 1.75rem;
+  font-weight: 700;
 }
 
 .right-container img {
