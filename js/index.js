@@ -15,12 +15,36 @@ $(window).scroll(function () {
       0.7,
       1.15
     );
-    let newOpacity = scale(currentScrollPosition, 0, maxMarsScroll, 1.0, 0.0);
+    let newOpacity = scale(
+      currentScrollPosition,
+      0,
+      maxMarsScroll + 100,
+      1.0,
+      0.0
+    );
     newWidth *= 100;
     newTextPosition *= 100;
     newOpacity *= 100;
     $(".mars-wrapper").css("width", newWidth + "%");
     $(".mars-text-wrapper").css("top", newTextPosition + "%");
     $(".mars-wrapper").css("opacity", newOpacity + "%");
+  }
+});
+
+let currentRover = 1;
+
+$(document).on("click", ".control", function () {
+  let roverContainerWidth = $(this).parent().get(0).scrollWidth;
+  let currentScrollPosiiton = $(this).parent().scrollLeft();
+  let toScroll = $(".rover").get(0).getBoundingClientRect().width;
+  console.log(toScroll);
+  if ($(this).hasClass("left-control")) {
+    $(this)
+      .parent()
+      .scrollLeft(currentScrollPosiiton - toScroll - 100);
+  } else {
+    $(this)
+      .parent()
+      .scrollLeft(currentScrollPosiiton + toScroll + 100);
   }
 });
