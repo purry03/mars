@@ -38,12 +38,14 @@ function animateText(currentScrollPosiiton) {
     let targetOpacity = 1;
     if ($(this).hasClass("full-opacity")) {
       targetOpacity = 1;
+    } else if ($(this).hasClass("three-quarter-opacity")) {
+      targetOpacity = 0.75;
     } else if ($(this).hasClass("half-opacity")) {
       targetOpacity = 0.5;
     }
     let newOpacity = scale(
       elementPosition,
-      (windowHeight / 3) * 2,
+      windowHeight * 0.66,
       0,
       0,
       targetOpacity

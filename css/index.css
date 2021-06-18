@@ -210,7 +210,7 @@ body {
   transform: translate(25%, -50%);
 }
 
-.planet-tooltip h3,
+/* .planet-tooltip h3,
 .planet-tooltip h4 {
   animation: leftFlyIn 1s ease-in-out;
 }
@@ -218,7 +218,7 @@ body {
 .tooltip-right h3,
 .tooltip-right h4 {
   animation: rightFlyIn 1s ease-in-out;
-}
+} */
 
 .tooltip-right .tooltip-line-wrapper hr {
   right: 0;
