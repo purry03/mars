@@ -646,26 +646,30 @@ footer a:hover {
   }
 }
 
+.animateLeftFlyIn {
+  animation: leftFlyIn 0.75s ease-in-out;
+}
+
+.animateRightFlyIn {
+  animation: rightFlyIn 0.75s ease-in-out;
+}
+
 @keyframes leftFlyIn {
   0% {
-    transform: translateX(-30px);
-    opacity: 0;
+    transform: translateX(-50px);
   }
 
   100% {
     transform: 0;
-    opacity: 1;
   }
 }
 
 @keyframes rightFlyIn {
   0% {
-    transform: translateX(30px);
-    opacity: 0;
+    transform: translateX(50px);
   }
 
   100% {
     transform: 0;
-    opacity: 1;
   }
 }

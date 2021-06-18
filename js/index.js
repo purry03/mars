@@ -1,11 +1,11 @@
 const maxMarsScroll = 700;
+const elementsToAnimate = $(".animated");
 
 function scale(number, inMin, inMax, outMin, outMax) {
   return ((number - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
 }
 
-$(window).scroll(function () {
-  let currentScrollPosition = $(window).scrollTop();
+function animateHeader(currentScrollPosition) {
   if (currentScrollPosition < maxMarsScroll) {
     let newWidth = scale(currentScrollPosition, 0, maxMarsScroll, 0.5, 1.0);
     let newTextPosition = scale(
@@ -29,6 +29,44 @@ $(window).scroll(function () {
     $(".mars-text-wrapper").css("top", newTextPosition + "%");
     $(".mars-wrapper").css("opacity", newOpacity + "%");
   }
+}
+
+function animateText(currentScrollPosiiton) {
+  const windowHeight = $(window).height();
+  elementsToAnimate.each(function () {
+    let elementPosition = $(this).position().top - currentScrollPosiiton;
+    let targetOpacity = 1;
+    if ($(this).hasClass("full-opacity")) {
+      targetOpacity = 1;
+    } else if ($(this).hasClass("half-opacity")) {
+      targetOpacity = 0.5;
+    }
+    let newOpacity = scale(
+      elementPosition,
+      (windowHeight / 3) * 2,
+      0,
+      0,
+      targetOpacity
+    );
+
+    if ($(this).hasClass("triggerLeftFlyIn")) {
+      if (newOpacity > 0) {
+        $(this).addClass("animateLeftFlyIn");
+      }
+    } else if ($(this).hasClass("triggerRightFlyIn")) {
+      if (newOpacity > 0) {
+        $(this).addClass("animateRightFlyIn");
+      }
+    }
+
+    $(this).css("opacity", newOpacity);
+  });
+}
+
+$(window).scroll(function () {
+  let currentScrollPosition = $(window).scrollTop();
+  animateHeader(currentScrollPosition);
+  animateText(currentScrollPosition);
 });
 
 let currentRover = 1;
