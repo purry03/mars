@@ -39,7 +39,7 @@ body {
 
 .mars-text-wrapper {
   position: absolute;
-  bottom: 0%;
+  bottom: 5%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: max-content;

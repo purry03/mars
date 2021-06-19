@@ -12,7 +12,7 @@ function animateHeader(currentScrollPosition) {
       currentScrollPosition,
       0,
       maxMarsScroll,
-      0,
+      0.05,
       -0.5
     );
     let newOpacity = scale(
