@@ -12,8 +12,8 @@ function animateHeader(currentScrollPosition) {
       currentScrollPosition,
       0,
       maxMarsScroll,
-      0.7,
-      1.15
+      0,
+      -0.5
     );
     let newOpacity = scale(
       currentScrollPosition,
@@ -26,7 +26,7 @@ function animateHeader(currentScrollPosition) {
     newTextPosition *= 100;
     newOpacity *= 100;
     $(".mars-wrapper").css("width", newWidth + "%");
-    $(".mars-text-wrapper").css("top", newTextPosition + "%");
+    $(".mars-text-wrapper").css("bottom", newTextPosition + "%");
     $(".mars-wrapper").css("opacity", newOpacity + "%");
   }
 }
